@@ -2,7 +2,7 @@ language:
   - nix
 
 script:
-  - out="$(nix-build)"
+  - out="$(nix-build shell.nix)"
 
 deploy:
   - provider: s3
