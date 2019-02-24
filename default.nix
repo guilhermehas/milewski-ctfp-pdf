@@ -1,6 +1,6 @@
 { pkgs ? import <nixpkgs> {} }: with pkgs;
 
-mkShell {
+stdenv.mkDerivation {
   FONTCONFIG_FILE = makeFontsConf { fontDirectories = [ inconsolata-lgc libertine libertinus ]; };
   buildInputs = [
     (texlive.combine {
